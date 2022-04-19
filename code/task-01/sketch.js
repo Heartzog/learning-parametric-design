@@ -21,12 +21,8 @@ function draw() {
   ellipse(380,240,5,5);
   ellipse(270,50,6,6);
   ellipse(210,40,5,5);
-  rect(220,270,10,5,10);
-  
-  stroke('rgba(0,0,0,0)');
-  fill('#2D3736');
-  square(280, 30, 100);
 
+  
   fill('transparent');
   strokeWeight(3);
   stroke('#607D71');
@@ -51,17 +47,6 @@ function draw() {
     200, 200,
     100, 100,
     Math.PI / 180 * -180,
-    Math.PI / 180 * 0,
-    OPEN
-  );
-
-  fill('rgba(0,0,0,0)');
-  strokeWeight(2);
-  stroke('#32092A');
-  arc(
-    50, 350,
-    300, 100,
-    Math.PI / 340 * -90,
     Math.PI / 180 * 0,
     OPEN
   );
