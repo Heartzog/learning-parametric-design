@@ -4,7 +4,7 @@ function preload() {
 
 const sketchWidth = 400;
 const sketchHeight = 400;
-const size = 10;
+const size = 20;
 
 function setup() {
   createCanvas(sketchWidth, sketchHeight);
@@ -12,18 +12,16 @@ function setup() {
 }
 
 function draw() {
-  background(255, 150, 50);
-  noStroke();
-
-  square(150, 150, 100, 100);
-
+  background(255);
+  strokeweight = 1;
   const columns = sketchWidth / size;
   const rows = sketchHeight / size;
 
-  for (let x = 0; x < columns; x += 1) {
-    for (let y = 0; y < rows; y += 2) {
-      fill(random(50, 200), random(0, 255), random(0, 255));
-      square(x * size, y * size, random(size));
+  for (let x = 0; x < columns; x++) {
+    for (let y = 0; y < rows; y++) {
+      fill(255);
+      line(x * size, y * size, random(400), random(400));
     }
   }
+  rect(150, 150, 75, 75);
 }
