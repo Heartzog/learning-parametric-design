@@ -16,6 +16,8 @@ function setup() {
 }
 
 function draw() {
+  stroke(255, 0, 0);
+  strokeWeight(2);
   noFill();
   beginShape();
   for (let x = 0; x < sketchWidth; x += 1) {
@@ -23,7 +25,6 @@ function draw() {
   }
   endShape();
 
-  stroke(0);
   fill(255);
   circle(200, 200, 100);
 
@@ -43,4 +44,14 @@ function draw() {
     }
   }
   noLoop();
+
+  beginShape();
+  vertex(150, 150);
+  vertex(120, 120);
+  endShape();
+
+  beginShape();
+  vertex(120, 140);
+  vertex(140, 160);
+  endShape();
 }
