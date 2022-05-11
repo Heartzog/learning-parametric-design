@@ -3,7 +3,6 @@ function preload() {
 }
 
 let sel;
-let a;
 function setup() {
   createCanvas(400, 400);
   frameRate(2);
@@ -11,7 +10,7 @@ function setup() {
   textAlign(CENTER);
   sel = createSelect();
   sel.position(0, 400);
-  sel.option(a, "Dreieck");
+  sel.option("Dreieck");
   sel.option("Kreis");
   sel.option("Viereck");
   sel.changed(mySelectEvent);
@@ -42,7 +41,7 @@ function mySelectEvent() {
   let item = sel.value();
   background(255);
   tri();
-  if ((item = a)) {
+  if ((item = "Dreieck")) {
     tri();
   } else if ((item = "Kreis")) {
     background(255);
