@@ -3,6 +3,7 @@ function preload() {
 }
 
 let sel;
+let item = "Dreieck";
 function setup() {
   createCanvas(400, 400);
   frameRate(2);
@@ -37,19 +38,49 @@ function tri() {
   }
 }
 
-function mySelectEvent() {
-  let item = sel.value();
-  background(255);
-  tri();
-  if ((item = "Dreieck")) {
-    tri();
-  } else if ((item = "Kreis")) {
-    background(255);
-    rect(5, 5, 50, 50);
-  } else {
-    background(255);
-    circle(50, 50, 50);
+function vier() {
+  let weiß = [255, random(0, 255), 255, 255, 255, 255]; //zufall zwischen weiß oder zufälliger Farbe
+  for (let x = 0; x < 10; x += 1) {
+    //x wert
+    for (let y = 0; y < 10; y += 1) {
+      //y wert
+      push();
+      translate(100 * x, 100 * y); //die Dreiecke werden nach unten und nach recht multipliziert
+      fill(random(weiß), random(weiß), random(weiß));
+      rect(0, 0, 100, 100);
+      pop();
+    }
   }
 }
 
-function draw() {}
+function circ() {
+  let weiß = [255, random(0, 255), 255, 255, 255, 255]; //zufall zwischen weiß oder zufälliger Farbe
+  for (let x = 0; x < 10; x += 1) {
+    //x wert
+    for (let y = 0; y < 10; y += 1) {
+      //y wert
+      push();
+      translate(100 * x, 100 * y); //die Dreiecke werden nach unten und nach recht multipliziert
+      fill(random(weiß), random(weiß), random(weiß));
+      circle(50, 50, 100);
+      pop();
+    }
+  }
+}
+
+function mySelectEvent() {
+  let item = sel.value();
+}
+
+function draw() {
+  background(255);
+  if (item === "Dreieck") {
+    tri();
+  } else if (item === "Viereck") {
+    background(255);
+    vier();
+  } else {
+    background(255);
+    circ();
+  }
+}
