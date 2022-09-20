@@ -2,11 +2,11 @@ function preload() {
   // preload assets
 }
 
-const sketchWidth = 400;
-const sketchHeight = 400;
+const sketchWidth = 1400;
+const sketchHeight = 700;
 const size = 20;
 
-let scalefaktor = 1;
+let scalefaktor = 0.5; //größe der Form
 let points = [];
 
 function setup() {
@@ -20,6 +20,7 @@ function setup() {
   background(0);
   for (let i = 0; i < 100; i += 1) {
     points.push({
+      //Punkte werden erstellt und Größe des Schweifs
       radius: random(30, 70),
       angle: random(0, 360),
     });
